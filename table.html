@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<body>
+    <script>
+
+        let sname, h, e, m, s, c, total, avg, sstatus;
+        sname = prompt("enter the name");
+        h = parseInt(prompt('enter hindi marks'))
+        e = parseInt(prompt('enter english marks'))
+        m = parseInt(prompt('enter math marks'))
+        s = parseInt(prompt('enter science marks'))
+        c = parseInt(prompt('enter computer marks'))
+        total = h + e + m + s + c;
+        avg = total / 5;
+        sstatus = (avg >= 60) ? "pass" : "fail";
+
+        document.write(`<table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th> name</th>
+                    <th>hindi</th>
+                    <th>english</th>
+                    <th>math</th>
+                    <th>Science</th>
+                    <th>total</th>
+                    <th>avg</th>
+                    <th>status</th>
+                    </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> ${sname} </td>
+                <td> ${h} </td>
+                    <td> ${e} </td>
+                        <td> ${m} </td>
+                            <td> ${s} </td>
+                                <td> ${total} </td>
+                                    <td> ${avg} </td>
+                                        <td style="color: ${avg>=60? 'green': 'red'}
+                                            ">${sstatus} </td>
+                                            </tr>
+        
+                                
+        </table>            
+    `)
+
+    </script>
+</body>
+
+</html>
